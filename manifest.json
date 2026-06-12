@@ -1,4 +1,5 @@
 {
+  "id": "overlay_info_ios",
   "name": {
     "en": "iOS Notification",
     "ru": "Уведомление iOS",
@@ -15,6 +16,13 @@
   "icon": "logo.png",
   "web": "index.html",
   "web_type": "overlay",
-  "web_contents": ["style.css", "ios.mp3", "logo.png"],
-  "permissions": ["WEB_CONTENT", "WEB_END_POINTS"]
+  "web_contents": [
+    "style.css",
+    "ios.mp3",
+    "logo.png"
+  ],
+  "permissions": [
+    "WEB_CONTENT",
+    "WEB_END_POINTS"
+  ]
 }
