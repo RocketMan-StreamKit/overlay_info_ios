@@ -1,0 +1,94 @@
+:root {
+  --ios-bg: rgba(28, 28, 30, 0.82);
+  --ios-border: rgba(255, 255, 255, 0.12);
+  --ios-title: #ffffff;
+  --ios-message: rgba(255, 255, 255, 0.82);
+  --ios-app: rgba(255, 255, 255, 0.55);
+}
+
+html,
+body {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.ios-notification {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-120%);
+  width: min(420px, calc(100vw - 32px));
+  padding: 12px 14px;
+  border-radius: 18px;
+  border: 1px solid var(--ios-border);
+  background: var(--ios-bg);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  opacity: 0;
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.35s ease;
+}
+
+.ios-notification.visible {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.ios-notification.leaving {
+  transform: translateX(-50%) translateY(-120%);
+  opacity: 0;
+}
+
+.ios-notification-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.ios-notification-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex: 0 0 auto;
+}
+
+.ios-notification-app {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--ios-app);
+  text-transform: uppercase;
+}
+
+.ios-notification-title {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--ios-title);
+  margin-bottom: 3px;
+}
+
+.ios-notification-message {
+  font-size: 14px;
+  line-height: 1.35;
+  color: var(--ios-message);
+  word-break: break-word;
+}

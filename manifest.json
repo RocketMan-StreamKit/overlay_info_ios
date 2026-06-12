@@ -1,0 +1,20 @@
+{
+  "name": {
+    "en": "iOS Notification",
+    "ru": "Уведомление iOS",
+    "uk": "Сповіщення iOS"
+  },
+  "description": {
+    "en": "Shows trigger info as an iOS-style notification with optional sound.",
+    "ru": "Показывает информацию о триггере в виде уведомления в стиле iOS со звуком.",
+    "uk": "Показує інформацію про тригер у вигляді сповіщення в стилі iOS зі звуком."
+  },
+  "type": "overlay.info",
+  "version": "1.0.0",
+  "author": "StreamKit+",
+  "icon": "logo.png",
+  "web": "index.html",
+  "web_type": "overlay",
+  "web_contents": ["style.css", "ios.mp3", "logo.png"],
+  "permissions": ["WEB_CONTENT", "WEB_END_POINTS"]
+}
